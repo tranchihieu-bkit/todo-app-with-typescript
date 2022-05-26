@@ -1,3 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +10,38 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url('https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/v546batch3-mynt-31-badgewatercolor_1.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=e1ee6e84fa2c584170bab2733ea5a1b0');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.display-start h1,
+.display-start div {
+  position: relative;
+  top: 0;
+  transition-property: top;
+  transition-duration: 1s;
+}
+
+
+.display-center h1,
+.display-center div {
+  position: relative;
+  top: calc(100vh - 65%);
+}
+
+.display-center ul {
+  opacity: 0;
+}
+
+.display-start ul {
+  opacity: 1;
+  transition-property: opacity;
+  transition-duration: 0.5s;
+  transition-delay: 1s;
 }
